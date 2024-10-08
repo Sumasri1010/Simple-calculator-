@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator app</title>
+</head>
+<body>
+    <div class="value-in-calculator"></div>
+    <div class="cal-container">
+    <button class="cal"
+    onclick="
+        calculation='';
+        document.querySelector('.value-in-calculator').innerHTML='';
+        ">AC</button>
+        <button class="cal"
+        onclick="
+            calculation+=' % ';
+            document.querySelector('.value-in-calculator').innerHTML=calculation;">%</button>
+            <button  class="cal" onclick="
+            if(calculation==null){
+                calculation='';
+            }
+            else{
+            let newCalculation='';
+            for(let i=0;i<calculation.length-1;i++){
+                newCalculation+=calculation[i];
+                
+
+            }
+            calculation=newCalculation;
+        }
+        document.querySelector('.value-in-calculator').innerHTML=calculation;
+            "><span class="cancel-button">&times;</span></button>
+        <button class="cal"
+        onclick="
+        calculation+=' / ';
+        document.querySelector('.value-in-calculator').innerHTML=calculation;">/</button>
+        <button class="cal" onclick="
+        calculation+='7';
+        document.querySelector('.value-in-calculator').innerHTML=calculation;"
+        >7</button>
+        <button class="cal" onclick="
+        calculation+='8';
+        document.querySelector('.value-in-calculator').innerHTML=calculation;">8</button>
+    <button class="cal" onclick="
+        calculation+='9';
+        document.querySelector('.value-in-calculator').innerHTML=calculation; ">9</button>
+        <button class="cal"
+        onclick="
+            calculation+=' * ';
+            document.querySelector('.value-in-calculator').innerHTML=calculation; ">*</button>
+
+        <button class="cal" onclick="
+        calculation+='4';
+        document.querySelector('.value-in-calculator').innerHTML=calculation;" 
+    
+    
+    
+    >4</button>
+    <button class="cal"
+    onclick="
+        calculation+='5';
+        document.querySelector('.value-in-calculator').innerHTML=calculation;">5</button>
+    <button class="cal" onclick="
+        calculation+='6';
+        document.querySelector('.value-in-calculator').innerHTML=calculation; ">6</button>
+        <button class="cal"
+        onclick="
+            calculation+=' - ';
+            document.querySelector('.value-in-calculator').innerHTML=calculation;">-</button>
+
+    
+    <button class="cal" onclick="
+        calculation+='1';
+        document.querySelector('.value-in-calculator').innerHTML=calculation;
+        "
+    
+    
+    >1</button>
+    <button class="cal" onclick="
+        calculation+='2';
+        document.querySelector('.value-in-calculator').innerHTML=calculation;
+        "
+    
+    
+    >2</button>
+    <button class="cal" onclick="
+        calculation+='3';
+        document.querySelector('.value-in-calculator').innerHTML=calculation;
+        ">3</button>
+
+    <button class="cal"
+    onclick="
+        calculation+=' + ';
+        document.querySelector('.value-in-calculator').innerHTML=calculation;
+        ">+</button>
+         <button class="cal"
+         onclick="
+             calculation+='00';
+             document.querySelector('.value-in-calculator').innerHTML=calculation; ">00</button>
+    <button class="cal" onclick="
+    calculation+='0';
+    document.querySelector('.value-in-calculator').innerHTML=calculation;
+    "
+
+>0</button>
+<button class="cal" onclick="
+            calculation+='.';
+            document.querySelector('.value-in-calculator').innerHTML=calculation;
+            ">.</button>
+    
+    <button class="cal"
+    onclick="
+        calculation=eval(calculation);
+        console.log(calculation)
+        document.querySelector('.value-in-calculator').innerHTML=calculation;
+        ">=</button>
+   
+
+    
+
+    
+</div>
+</body>
+<style>
+    .cal-container{
+    display:grid;
+    grid-template-columns: 30px 30px 30px 30px;
+    column-gap: 10px;
+    row-gap: 10px;
+    }
+    .cal{
+        color: white;
+        border:none;
+        border-radius: 5px;
+        background-color: black;
+        cursor: pointer;
+    }
+    .value-in-calculator{
+        font-size: 30px;
+        display: block;
+        text-align: end;
+        font-weight: bold;
+        color: rgb(0,0,0);
+    }
+    
+    
+</style>
+
+<script>
+    let calculation='';
+
+</script>
+</html>
